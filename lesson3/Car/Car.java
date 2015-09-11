@@ -18,7 +18,7 @@ public class Car
         double gasConsumed = distance / milerPerGallon;
         gasInTank = gasInTank - gasConsumed;
         int pixelsPerMile = 10;
-        pic.translate(distance * pixelsPerMile, 0));
+        pic.translate(distance * pixelsPerMile, 0);
     }
     
     public void addGas(double amount)
