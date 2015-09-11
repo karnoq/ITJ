@@ -14,6 +14,9 @@ public class Car
     public void drive(double distance)
     {
         milesDriven = milesDriven + distance;
+        double milesPerGallon = 50;
+        double gasConsumed = distance / milerPerGallon;
+        gasInTank = gasInTank - gasConsumed;
         int pixelsPerMile = 10;
         pic.translate(distance * pixelsPerMile, 0));
     }
