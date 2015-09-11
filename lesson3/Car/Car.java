@@ -21,4 +21,8 @@ public class Car
     }
     
     // More methods...
+    public double getGasInTank()
+    {
+        return gasInTank;
+    }
 }
