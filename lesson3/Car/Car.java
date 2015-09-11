@@ -9,10 +9,13 @@ public class Car
 {
     private double milesDriven;
     private double gasInTank;
+    private Picture pic;
     
     public void drive(double distance)
     {
         milesDriven = milesDriven + distance;
+        int pixelsPerMile = 10;
+        pic.translate(distance * pixelsPerMile, 0));
     }
     
     public void addGas(double amount)
