@@ -25,4 +25,9 @@ public class Person
     {
         friends = friends.replace(nonFriend.name + " ", "");
     }
+    
+    public String getFriends()
+    {
+        return friends;
+    }
 }
