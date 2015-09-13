@@ -11,6 +11,24 @@ public class Car
     private double gasInTank;
     private Picture pic;
     
+    public Car(double mpg)
+    {
+        milesDriven = 0;
+        gasInTank = 0;
+        milesPerGallon = mpg;
+        pic = new Picture("car.jpg");
+        pic.draw();
+    }
+    
+    public Car(double mpg, String pictureFile)
+    {
+        milesDriven = 0;
+        gasInTank = 0;
+        milesPerGallon = mpg;
+        pic = new Picture(pictureFile);
+        pic.draw();
+    }
+    
     public void drive(double distance)
     {
         milesDriven = milesDriven + distance;
@@ -18,7 +36,7 @@ public class Car
         double gasConsumed = distance / milesPerGallon;
         gasInTank = gasInTank - gasConsumed;
         int pixelsPerMile = 10;
-        //pic.translate(distance * pixelsPerMile, 0);
+        pic.translate(distance * pixelsPerMile, 0);
     }
     
     public void addGas(double amount)
