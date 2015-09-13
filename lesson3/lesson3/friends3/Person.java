@@ -9,7 +9,7 @@ public class Person
     // 1) String pictureName
     // 2) int xCoord
     // 3) int yCoord
-    public Person (String aName, ...)
+    public Person (String aName, String pictureName, int xCoord, int yCoord)
     {
         name = aName;
         friends = "";
@@ -18,11 +18,14 @@ public class Person
         //
         // You need to create a local variable called picture and assign to
         // picture the picture that we want to use.
+        Picture pic = new Picture(pictureName);
         //
         // You need need to move the picture to xCoord and yCoord.
         // You can move the picture object by calling the translate method.
+        pic.translate(xCoord, yCoord);
         //
         // The last step is to draw the picture.
+        pic.draw();
     }
 
    // This function return the friends of this Person object
