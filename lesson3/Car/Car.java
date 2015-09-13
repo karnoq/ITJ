@@ -9,6 +9,7 @@ public class Car
 {
     private double milesDriven;
     private double gasInTank;
+    private double milesPerGallon;
     private Picture pic;
     
     public Car(double mpg)
@@ -32,7 +33,6 @@ public class Car
     public void drive(double distance)
     {
         milesDriven = milesDriven + distance;
-        double milesPerGallon = 50;
         double gasConsumed = distance / milesPerGallon;
         gasInTank = gasInTank - gasConsumed;
         int pixelsPerMile = 10;
