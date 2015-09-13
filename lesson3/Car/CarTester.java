@@ -16,7 +16,7 @@ public class CarTester
        car.drive(100);
        
        // Print actual and expected gas level
-       System.out.println("Actual: " + car.getGasInTank());
+       System.out.println(car.getGasInTank());
        System.out.println("Expected: " + 18);
    }
 }
