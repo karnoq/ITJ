@@ -16,7 +16,7 @@ public class Person
    // the names of the friends of this Person object.
    public String getFriends()
    {
-
+       return friends;
    }
 
     public void addFriend(Person friend)
