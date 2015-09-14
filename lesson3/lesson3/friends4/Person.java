@@ -10,6 +10,8 @@ public class Person
     //
     // For example:
     // private int x;
+    private int x;
+    private int y;
 
     public Person (String aName, String pictureName, int xCoord, int yCoord)
     {
@@ -24,6 +26,8 @@ public class Person
         //
         // For example (here's a freebie for you!):
         // x = xCoord;
+        x = xCoord;
+        y = yCoord;
     }
 
    // This function return the friends of this Person object
@@ -47,9 +51,11 @@ public class Person
         //
         // To draw a small circle, 1st, create a SmallCircle object. For example:
         // SmallCircle circle = new SmallCircle(x-position, y-position);
+        SmallCircle circle = new SmallCircle(x, y);
         //
         // and the draw the circle by calling the fill() function. For example:
         // circle.fill();
+        circle.fill();
         //
         // 2nd, draw a line from the small circle above to
         // the friend object that is passed into the addFriend function.
@@ -57,6 +63,8 @@ public class Person
         // For example:
         // Line someLine = new Line (startingXPosition, startingYPosition, endingXPosition, endingYPosition);
         // line.draw();
+        Line someLine = new Line(x, y, friend.x, friend.y);
+        someLine.draw();
         //
         // HINTS:
         // a) startXPosition and startYPosition are the x and y position of this person object
