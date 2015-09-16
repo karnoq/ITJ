@@ -6,6 +6,9 @@ public class BookTester
 
         System.out.println(alice.getNumCharacters());
         System.out.println("Expected: 144331");
+        System.out.println("Actual " + alice.firstOccurrenceOfMadHatter());
+        
+        System.out.println("Actual " + alice.getFirstSentence());
 
         Book mary = new Book("mary.txt");
         System.out.println(mary.getNumCharacters());
