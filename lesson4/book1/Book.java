@@ -55,6 +55,17 @@ public class Book
         int secondPeriod = bookText.indexOf(".", firstPeriod + 1);
         return bookText.substring(firstPeriod + 1, secondPeriod + 1);
     }
+    
+    /**
+     * Counts how many times "Alice" occurs in this book.
+     * @return the number of occurrences
+     */
+    public int occurrencesOfAlice()
+    {
+        int bookLength = bookText.lenght();
+        int bookLengthWithoutAlice = bookText.replace("Alice", "").length();
+        return (bookLength - bookLengthWithoutAlice) / 5;
+    }
 
     /**
      * A method to help read the book out of the file.
