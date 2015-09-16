@@ -2,6 +2,7 @@
 // Video: Color Your Own Sunset Effect
 
 // TODO: Add import statement
+import java.util.Scanner;
 
 public class Sunset
 {
@@ -12,12 +13,14 @@ public class Sunset
 
         System.out.print("Added redness: ");
         // TODO: Read added redness from scanner
+        Scanner in = new Scanner(System.in);
+        int added_red = in.nextInt();
 
         pic.draw();
         for (int i = 0; i < pic.pixels(); i++)
         {
             Color c = pic.getColorAt(i);
-            c.redden(); // TODO: Pass added redness to method
+            c.redden(added_red); // TODO: Pass added redness to method
             pic.setColorAt(i, c);
         }
     }

@@ -10,9 +10,8 @@ public class Color
     /**
      * Makes this color redder.
      */
-    public void redden() // TODO: Add a parameter
+    public void redden(int ADDED_RED) // TODO: Add a parameter
     {
-        final int ADDED_RED = 25; // TODO: Remove
         final int MAX_RED = 255;
         red = Math.min(MAX_RED, red + ADDED_RED);
     }
