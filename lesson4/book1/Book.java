@@ -25,6 +25,15 @@ public class Book
         // Which string method do you want to use?
         return bookText.length();
     }
+    
+    /**
+     * Finds where the string "Mad Hatter" occurs for the first time in the book.
+     * @return the location of the first occurence of the string
+     */
+    public int firstOccurrenceOfMadHatter()
+    {
+        return bookText.indexOf("MadHatter");
+    }
 
     /**
      * A method to help read the book out of the file.
