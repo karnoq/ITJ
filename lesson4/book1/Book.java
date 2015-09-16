@@ -34,6 +34,16 @@ public class Book
     {
         return bookText.indexOf("Mad Hatter");
     }
+    
+    /**
+     * Gets the first sentence of this book.
+     * @return the first sentence (including the period) of this book.
+     */
+    public String getFirstSentence()
+    {
+        int indexOfPeriod = bookTest.indexOf(".");
+        return bookText.substring(0, indexOfPeriod + 1);
+    }
 
     /**
      * A method to help read the book out of the file.
