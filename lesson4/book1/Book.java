@@ -32,7 +32,7 @@ public class Book
      */
     public int firstOccurrenceOfMadHatter()
     {
-        return bookText.indexOf("MadHatter");
+        return bookText.indexOf("Mad Hatter");
     }
 
     /**
