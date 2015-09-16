@@ -13,6 +13,7 @@ public class Color
     {
 
         // TODO
+        red = Math.min(red + 25, 255);
 
     }
 
