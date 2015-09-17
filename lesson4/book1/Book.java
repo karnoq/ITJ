@@ -66,6 +66,18 @@ public class Book
         int bookLengthWithoutAlice = bookText.replace("Alice", "").length();
         return (bookLength - bookLengthWithoutAlice) / 5;
     }
+    
+    /**
+     * Counts how many times a given word occurs in this book.
+     * @param word a word of length >= 1
+     * @return the number of occurrences
+     */
+    public int occurrencesOf(String word)
+    {
+        int length = bookText.length();
+        int lengthWithoutWord = bookText.replace(word, "").length();
+        return (length - lengthWithoutWord) / word.lenght();
+    }
 
     /**
      * A method to help read the book out of the file.
