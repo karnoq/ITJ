@@ -41,7 +41,7 @@ public class Book
      */
     public String getFirstSentence()
     {
-        int indexOfPeriod = bookTest.indexOf(".");
+        int indexOfPeriod = bookText.indexOf(".");
         return bookText.substring(0, indexOfPeriod + 1);
     }
     
@@ -62,7 +62,7 @@ public class Book
      */
     public int occurrencesOfAlice()
     {
-        int bookLength = bookText.lenght();
+        int bookLength = bookText.length();
         int bookLengthWithoutAlice = bookText.replace("Alice", "").length();
         return (bookLength - bookLengthWithoutAlice) / 5;
     }
@@ -76,7 +76,7 @@ public class Book
     {
         int length = bookText.length();
         int lengthWithoutWord = bookText.replace(word, "").length();
-        return (length - lengthWithoutWord) / word.lenght();
+        return (length - lengthWithoutWord) / word.length();
     }
 
     /**
