@@ -26,5 +26,13 @@ public class Plot
         // the number of even and odd rows,
         // the number of columns in each even and odd row,
         // and finally the total number of fields
+        int total = (int)((length - (2 * radius)) / (radius * Math.sqrt(3))) + 1;
+        int numEvenRows = (int)(total / 2);
+        int numOddRows = (int)((total/2) + total%2);
+        int circlesPerOddRow = (int)(width / (2 * radius));
+        int circlesPerEvenRow = (int)((width - radius) / (2 * radius));
+        
+        int totalCircles = numOddRows * circlesPerOddRow + numEvenRows * circlesPerEvenRow;
+        return totalCircles;
     }
 }
