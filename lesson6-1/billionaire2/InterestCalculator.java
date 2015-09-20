@@ -6,11 +6,13 @@ public class InterestCalculator
     public static void main(String[] args)
     {
         double balance = 100;
+        double target = 1E6;
+        double interestRate = 0.10;
         int year = 0;
 
-        while (balance < 1000000)
+        while (balance < target)
         {
-            double interest = balance * .01;
+            double interest = balance * interestRate;
             balance = balance + interest;
             year++;
         }
