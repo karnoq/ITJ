@@ -19,6 +19,7 @@ public class FixTheError
             double interest = balance * rate;
             balance = balance + interest;
             System.out.printf("Year %d: %8.2f\n", year, balance);
+            year++;
         }
     }
 }
