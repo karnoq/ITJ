@@ -12,9 +12,9 @@ public class CountingDown
         //   19 days left
         //   18 days left
         // and so on, down to 0 days left.
-        for (int i = 0; i <= 10; i++)
+        for (int i = 20; i > 0; i--)
         {
-            System.out.println(i);
+            System.out.printf("%d days left\n", i);
         }
     }
 }
