@@ -14,22 +14,16 @@ public class Average
         double value;
         int count = 0;
         double sum = 0;
-        boolean done = false;
-
-        while (!done)
+        System.out.print("Enter a value, 0 to quit: ");
+        
+        while (in.hasNextDouble())
         {
-            System.out.print("Enter a value, 0 to quit: ");
+            
             value = in.nextDouble();
-            if (value != 0)
-            {
-                sum = sum + value;
-                count++;
-            }
-            else
-            {
-                done = true;
-
-            }
+            sum = sum + value;
+            count++;
+            
+            System.out.print("Enter a value, 0 to quit: ");
         }
         double average = sum / count;
         System.out.printf("Average: %.2f\n", average);
