@@ -21,7 +21,13 @@ public class Average
             count++;
             System.out.print("Enter a value, Q to quit: ");
         }
-        double average = sum / count;
-        System.out.printf("Average: %.2f\n", average);
+        
+        if (count != 0)
+        {
+            double average = sum / count;
+            System.out.printf("Average: %.2f\n", average);
+        }
+        else
+            System.out.print("Error: No input");
     }
 }
