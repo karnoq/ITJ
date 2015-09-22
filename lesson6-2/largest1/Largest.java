@@ -14,12 +14,12 @@ public class Largest
         Scanner in = new Scanner(System.in);
         System.out.println("Enter values, Q to quit: ");
         double largest = in.nextDouble();
-        while (...)
+        while (in.hasNextDouble())
         {
-            double input = ...;
-            if (...)
+            double input = in.nextDouble();
+            if (input > largest)
             {
-                ...;
+                largest = input;
             }
         }
         System.out.println("Largest value: " + largest);
