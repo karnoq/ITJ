@@ -17,12 +17,12 @@ public class Colors
         {
             for (int j = 0; j < COLUMNS; j++)
             {
-                int x = ...;
-                int y = ...;
+                int x = j * WIDTH;
+                int y = i * WIDTH;
                 Rectangle rect = new Rectangle(x, y,
                                                WIDTH - 1, WIDTH - 1);
-                int blue = ...;
-                int green = ...;
+                int blue = i * (int)(255/(ROWS - 1));
+                int green = j * (int)(255/(COLUMNS - 1));
                 Color fillColor = new Color(0, blue, green);
                 rect.setColor(fillColor);
                 rect.fill();
