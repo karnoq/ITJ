@@ -30,7 +30,11 @@ public class FirstMatch
         // "There are no long words"
         // instead of
         // "The first long word is: " ...
-
-        System.out.println("The first long word is: " + longWord);
+        if (!found)
+        {
+            System.out.println("There are no long words");
+        }
+        else
+            System.out.println("The first long word is: " + longWord);
     }
 }
