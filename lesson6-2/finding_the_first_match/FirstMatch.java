@@ -17,6 +17,15 @@ public class FirstMatch
         // TODO: Write a loop that searches for long words
         // (more than THRESHOLD letters)
         // The loop should stop if you find one or if you run out of words
+        while (!found && in.hasNext())
+        {
+            String word = in.next();
+            if (word.length() > THRESHOLD)
+            {
+                longWord = word;
+                found = true;
+            }
+        }
         System.out.println("The first long word is: " + longWord);
     }
 }
