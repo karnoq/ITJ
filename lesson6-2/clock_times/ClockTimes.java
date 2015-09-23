@@ -17,5 +17,15 @@ public class ClockTimes
         // Write a nested for loop that counts up the hours and the minutes
         // Hint: you can use %02d in format strings to print a "zero-padded"
         // number. 
+        int HOURS = 12;
+        
+        for (int minute = 0; minute < 60; minute++)
+        {
+            for (int hour = 1; hour <= HOURS; hour++)
+            {
+                System.out.printf("%d:%02d ", hour, minute);
+            }
+            System.out.println();
+        }
     }
 }
