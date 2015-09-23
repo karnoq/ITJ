@@ -22,14 +22,14 @@ public class Center
         double centerY = pic.getHeight() / 2;
         double radius = pic.getHeight() / 4;
 
-        for (int x = ...; ...; ...)
+        for (int x = 0; x < pic.getWidth(); x++)
         {
-            for (int y = ...; ...; ...)
+            for (int y = 0; y < pic.getHeight(); y++)
             {
-                double distance = ...;
-                if (...)
+                double distance = Math.sqrt((x - centerX)*(x - centerX) + (y - centerY)*(y - centerY));
+                if (distance > radius)
                 {
-                    pic.setColorAt(..., ..., Color.BLACK);
+                    pic.setColorAt(x, y, Color.BLACK);
                 }
             }
         }
