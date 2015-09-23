@@ -14,7 +14,14 @@ public class CountingMatches
 
         System.out.print("Enter a value, Q to quit: " );
 
-        ...
+        double value = 0;
+        while (in.hasNextDouble())
+        {
+            value = in.nextDouble();
+            if (value < 0)
+                counter++;
+            System.out.print("Enter a value, Q to quit: ");
+        }
 
         System.out.println("The water line fell on " + counter + " years.");
     }
