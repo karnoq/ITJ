@@ -32,5 +32,7 @@ public class Die
     public int cast()
     {
         // TODO: Complete this method
+        int face = generator.nextInt(sides) + 1;
+        return face;
     }
 }
