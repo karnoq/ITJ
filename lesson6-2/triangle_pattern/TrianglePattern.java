@@ -13,5 +13,17 @@ public class TrianglePattern
         // you print one pair of brackets and on the 
         // second row you print 2 pairs of brackets, and
         // so on...
+        String pattern = "[]";
+        int numberOfRows = 5;
+        
+        for (int i = 1; i <= numberOfRows; i++)
+        {
+            for (int j = 1; j <= i; j++)
+            {
+                System.out.print(pattern);
+            }
+            System.out.println();
+        }
+
     }
 }
