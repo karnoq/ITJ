@@ -14,13 +14,14 @@ public class Largest2
     public static void main(String[] args)
     throws FileNotFoundException
     {
-        ...
-        Scanner in = new Scanner(...);
+        String filename = "input.txt";
+        File inputFile = new File(filename);
+        Scanner in = new Scanner(inputFile);
 
-        double largest = ...;
-        while (...)
+        double largest = in.nextDouble();
+        while (in.hasNextDouble())
         {
-            double input = ...;
+            double input = in.nextDouble();
             if (input > largest)
             {
                 largest = input;
