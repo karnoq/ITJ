@@ -17,6 +17,7 @@ public class LargestCountries
         double largest = population;
 
         // TODO: Print the population and name of the country with largest population
+        String largestCountry = "";
 
         // HINT: What else do you need to remember?
         // What variable(s) should you add so you can
@@ -28,9 +29,10 @@ public class LargestCountries
             if (population > largest)
             {
                 largest = population;
+                largestCountry = country;
             }
         }
-        System.out.println("The country with the largest population is: " + "TODO");
+        System.out.println("The country with the largest population is: " + largestCountry);
         System.out.println("The largest population is: " + largest);
     }
 }
