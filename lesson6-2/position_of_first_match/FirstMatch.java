@@ -15,6 +15,7 @@ public class FirstMatch
         boolean found = false;
 
         final int THRESHOLD = 9;
+        int position = -1; // using -1 as start since 0 would be off by one.
 
         // TODO: Remember and print the position of the first word
         // longer than THRESHOLD characters.
@@ -26,10 +27,11 @@ public class FirstMatch
                 longWord = word;
                 found = true;
             }
+            position++;
         }
         if (found)
         {
-            System.out.println("The first long word is " + longWord + " at position " + ...);
+            System.out.println("The first long word is " + longWord + " at position " + position);
         }
         else
         {
