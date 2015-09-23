@@ -24,5 +24,15 @@ public class Number
         // TODO: count and return the number of times the given digit appears in the number
 
         // Hint: The last digit is (int)(numbers % 10).
+        int matches = 0;
+        int tempNumber = (int)this.number;
+        
+        while (tempNumber != 0)
+        {
+            if (digitToMatch == tempNumber % 10)
+                matches++;
+            tempNumber = tempNumber / 10;
+        }
+        return matches;
     }
 }
