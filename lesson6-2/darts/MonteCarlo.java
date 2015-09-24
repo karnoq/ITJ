@@ -28,13 +28,14 @@ public class MonteCarlo
         {
             // Generate two random numbers between -1 and 1
 
-            double x = ...;
+            double x = (generator.nextDouble()) * 2 - 1.0;
 
-            double y = ...;
+            double y = (generator.nextDouble()) * 2 - 1.0;
 
             // Check whether the point lies in the unit circle
+            double distance = Math.sqrt((0 - x)*(0 - x) + (0 - y)*(0 - y));
 
-            if (...)
+            if (distance < 1)
             {
                 hits++;
             }
