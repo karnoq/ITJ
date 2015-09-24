@@ -28,6 +28,21 @@ public class BuffonPiEstimation
         // if yHigh is above the line (the line is at a height of 2),
         // the needle is touching the line, and counts as a hit.
         // Hint: Math.sin takes an angle in radians.
+        int hits = 0;
+        
+        for (int i = 0; i < tries; i++)
+        {
+            double yLow = generator.nextDouble() * 2;
+            double angle = Math.toRadians(generator.nextDouble() * 180);
+            double yHigh = yLow + Math.sin(angle);
+            
+            if (yHigh > 2)
+            {
+                hits++;
+            }
+        }
+        
+        double piEstimate = (double) tries / hits;
 
         System.out.println(piEstimate);
     }
