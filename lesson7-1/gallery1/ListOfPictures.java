@@ -18,6 +18,7 @@ public class ListOfPictures
         for (int i = 0; i < gallery.size(); i++)
         {
             Picture pic = gallery.get(i);
+            pic.translate(100 * i, 0);
             pic.draw();
         }
     }
