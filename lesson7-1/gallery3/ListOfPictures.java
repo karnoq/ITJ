@@ -12,12 +12,16 @@ public class ListOfPictures
         gallery.add(new Picture("monet1.jpg"));
         gallery.add(new Picture("monet2.jpg"));
         gallery.add(new Picture("renoir1.jpg"));
+        
+        int rightmostX = 0;
 
         for (Picture pic : gallery)
         {
             // TODO: Move the first picture to offset 10,
             // the second picture ten pixels to the right of the first one,
             // and so on
+            pic.translate(rightmostX + 10, 0);
+            rightmostX = pic.getMaxX();
         }
 
         for (Picture pic : gallery)
