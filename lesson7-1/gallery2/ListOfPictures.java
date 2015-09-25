@@ -13,12 +13,13 @@ public class ListOfPictures
         gallery.add(new Picture("monet2.jpg"));
         gallery.add(new Picture("renoir1.jpg"));
 
-        for()
+        for(int i = 1; i < gallery.size(); i++)
         {
             Picture pic = gallery.get(i);
             Picture left = gallery.get(i - 1);
             // Move pic 10 pixels to the right of left
             // Hint: left.getMaxX()
+            pic.translate(left.getMaxX() + 10, 0);
         }
 
         for (int i = 0; i < gallery.size(); i++)
