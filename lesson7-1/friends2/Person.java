@@ -52,5 +52,6 @@ public class Person
         // YOUR CODE HERE
         // How would you do this without adding more than one line?
         // Think about ArrayList methods we talked about that might help you.
+        return friends.size();
     }
 }
