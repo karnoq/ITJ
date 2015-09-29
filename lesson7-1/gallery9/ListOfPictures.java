@@ -13,7 +13,16 @@ public class ListOfPictures
         gallery.add(new Picture("renoir1.jpg"));
         gallery.add(new Picture("seurat1.jpg"));
 
-        ArrayList<Picture> matches = ...;
+        ArrayList<Picture> matches = new ArrayList<Picture>();
+        // If pictues is in portrait orientation add it to
+        // the matches array list.
+        for (Picture pic : gallery)
+        {
+            if (pic.getHeight() > pic.getWidth())
+            {
+                matches.add(pic);
+            }
+        }
 
         int rightmostX = 0;
         for (Picture pic : matches)
