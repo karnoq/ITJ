@@ -19,6 +19,7 @@ public class BookListDemo
         // Insert Why Zebras Don't Get Ulcers after
         // Night Watch and before Next.
         // You can use the variable anotherBook that I defined above.
+        booksToRead.add(2, anotherBook);
 
 
         // Please don't modify the following line:
