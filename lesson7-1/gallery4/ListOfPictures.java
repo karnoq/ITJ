@@ -15,6 +15,9 @@ public class ListOfPictures
 
         // TODO: Rotate the gallery so that the last picture
         // becomes the first one, the first the second, and so on.
+        Picture last = gallery.get(gallery.size() - 1);
+        gallery.remove(last);
+        gallery.add(0, last);
 
 
         int rightmostX = 0;
