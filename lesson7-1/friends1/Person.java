@@ -6,16 +6,17 @@
 // Change the friends variable to store an ArrayList<String>
 // that contains the names of the friends.
 // Re-implement the addFriend and getFriends methods.
+import java.util.ArrayList;
+
 public class Person
 {
     private String name;
-    private String friends;
-    private static final String SEPARATOR = ", ";
-
+    private ArrayList<String> friends;
+    
     public Person(String name)
     {
         this.name = name;
-        this.friends = "";
+        this.friends = new ArrayList<String>();
     }
 
     /**
@@ -24,7 +25,7 @@ public class Person
      */
     public void addFriend(Person friend)
     {
-        friends = friends + friend.name + SEPARATOR;
+        friends.add(friend.name);
     }
 
     /**
@@ -34,14 +35,8 @@ public class Person
      */
     public String getFriends()
     {
-        if (friends.length() == 0)
-        {
-            return "";
-        }
-        else
-        {
-            return friends.substring(0, friends.length() - SEPARATOR.length());
-        }
+        String allFriends = friends.toString();
+        return allFriends.substring(1, allFriends.length() - 1);
     }
 
     /**
@@ -51,18 +46,13 @@ public class Person
      */
     public String getFriend(int friendIndex)
     {
-        int start = 0;
-        // Skip to the beginning of the name with the given index
-        for (int i = 0; i < friendIndex; i++)
-        {
-            int separatorIndex = friends.indexOf(SEPARATOR, start);
-            if (separatorIndex == -1)
-            {
-                return "";
-            }
-            start = separatorIndex + SEPARATOR.length();
+       if (0 <= friendIndex && friendIndex < friends.size())
+       {
+           return friends.get(friendIndex);
+       }
+       else
+       {
+           return "";
         }
-        int nextSeparatorIndex = friends.indexOf(SEPARATOR, start);
-        return friends.substring(start, nextSeparatorIndex);
     }
 }
