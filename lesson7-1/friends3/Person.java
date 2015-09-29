@@ -48,6 +48,13 @@ public class Person
         // Cay#Cheng-Han
         // not
         // Cay#Cheng-Han#
+        String names = "";
+        for (int i = 0; i < friends.size(); i++)
+        {
+            names = names + getFriend(i) + separator;
+        }
+        
+        return names.substring(0, names.lastIndexOf(separator));
     }
 
     /**
