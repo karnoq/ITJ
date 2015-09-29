@@ -22,7 +22,7 @@ public class BookListDemo
         // Replace The Eyre Affair with
         // Lost in a Good Book
         // you can use the variable sequel that I defined above.
-        booksToRead.add(2, anotherBook);
+        booksToRead.set(0, sequel);
 
         // Please don't modify the following line:
         System.out.println(booksToRead);
