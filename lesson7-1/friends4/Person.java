@@ -34,8 +34,7 @@ public class Person
      */
     public String getFriends()
     {
-        String friendsWithBrackets = friends.toString();
-        return friendsWithBrackets.substring(1, friendsWithBrackets.length() - 1);
+        return getFriends(", ");
     }
 
     /**
