@@ -10,12 +10,12 @@ import java.util.ArrayList;
 public class Person
 {
     private String name;
-    private ArrayList<String> friends;
+    private ArrayList<Person> friends;
 
     public Person(String name)
     {
         this.name = name;
-        friends = new ArrayList<String>();
+        friends = new ArrayList<Person>();
     }
 
     /**
@@ -24,7 +24,7 @@ public class Person
      */
     public void addFriend(Person friend)
     {
-        friends.add(friend.name);
+        friends.add(friend);
     }
 
     /**
@@ -48,11 +48,11 @@ public class Person
         String separatedFriends = "";
         if (friends.size() > 0)
         {
-            separatedFriends = separatedFriends + friends.get(0);
+            separatedFriends = separatedFriends + friends.get(0).name;
         }
         for (int i = 1; i < friends.size(); i++)
         {
-            separatedFriends = separatedFriends + separator + friends.get(i);
+            separatedFriends = separatedFriends + separator + friends.get(i).name;
         }
         return separatedFriends;
     }
