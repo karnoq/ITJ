@@ -14,6 +14,15 @@ public class ListOfPictures
         gallery.add(new Picture("seurat1.jpg"));
 
         // Your code here
+        Picture tallest = new Picture();
+        tallest = gallery.get(0);
+        for (Picture pic : gallery)
+        {
+            if (pic.getHeight() > tallest.getHeight())
+            {
+                tallest = pic;
+            }
+        }
 
         System.out.println("Tallest height: "
                            + tallest.getHeight());
