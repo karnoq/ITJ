@@ -62,6 +62,18 @@ public class Person
         // YOUR CODE HERE
         // Remove all the friends who don't have you as a friend.
         // You may want to use the find method.
+        int i = 0;
+        while (i < friends.size())
+        {
+            if (friends.get(i).find(this) == -1)
+            {
+                friends.remove(i);
+            }
+            else
+            {
+                i++;
+            }
+        }
     }
 
     /**
