@@ -15,13 +15,21 @@ public class ListOfPictures
 
         int i = 0;
         boolean found = false;
-        while ()
+        while (!found && i < gallery.size())
         {
+            if (gallery.get(i).getHeight() > gallery.get(i).getWidth())
+            {
+                found = true;
+            }
+            else
+            {
+                i++;
+            }
         }
 
         if (found)
         {
-            ....draw();
+            gallery.get(i).draw();
         }
     }
 }
