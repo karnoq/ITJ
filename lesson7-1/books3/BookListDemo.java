@@ -23,6 +23,7 @@ public class BookListDemo
         // YOUR CODE HERE
         // Take Why Zebras Don't Get Ulcers off the list of books to read.
         // Note, it may have moved from its original index.
+        booksToRead.remove(booksToRead.indexOf(anotherBook));
 
         // Please don't modify the following line:
         System.out.println(booksToRead);
