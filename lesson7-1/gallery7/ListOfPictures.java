@@ -14,6 +14,14 @@ public class ListOfPictures
         gallery.add(new Picture("renoir1.jpg"));
 
         // Your code here
+        int count = 0;
+        for (Picture pic : gallery)
+        {
+            if (pic.getHeight() > pic.getWidth())
+            {
+                count++;
+            }
+        }
 
         System.out.println("Pictures with portrait orientation: " + count);
     }
