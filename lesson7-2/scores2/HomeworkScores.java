@@ -31,7 +31,13 @@ public class HomeworkScores
         // YOUR CODE HERE
         // Sum all the scores that have been entered so far and
         // return the result.
-        return 0;
+        double sum = 0;
+        
+        for (Double score : scores)
+        {
+            sum += score;
+        }
+        return sum;
     }
 
     public void readScores(Scanner userInput)
