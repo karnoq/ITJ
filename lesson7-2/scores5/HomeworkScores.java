@@ -39,6 +39,19 @@ public class HomeworkScores
     public int getLowScoreIndex()
     {
         // TODO: Find and return the index of the lowest score in scores.
+        //return find(lowScore()); // this way still looks throught the array twice
+        
+        double lowestScore = scores[0];
+        int lowestScoreIndex = 0;
+        for (int i = 1; i < currentSize; i++)
+        {
+            if (scores[i] < lowestScore)
+            {
+                lowestScore = scores[i];
+                lowestScoreIndex = i;
+            }
+        }
+        return lowestScoreIndex;
     }
 
     public void readScores(Scanner userInput)
