@@ -67,6 +67,19 @@ public class GradeBook
     public double[] totalsForAllTopics()
     {
         // TODO: Implement the totalsForAllTopics method.
+
+        double[] totals = new double[numTopics];
+        
+        for (int row = 0; row < grades.length; row++)
+        {
+            for (int column = 0; column < numTopics; column++)
+            {
+                totals[column] = totals[column] + grades[row][column];
+            }
+        }
+        
+        return totals;
+
     }
 
     // This method reads the scores from the file. Don't look inside.

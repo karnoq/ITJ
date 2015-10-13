@@ -50,6 +50,17 @@ public class GradeBook
     {
         // YOUR CODE HERE
         // Implement this method.
+<<<<<<< HEAD
+=======
+        double[] results = new double[numStudents];
+        
+        for (int row = 0; row < numStudents; row++)
+        {
+            results[row] = totalForStudent(row);
+        }
+        
+        return results;
+>>>>>>> 2798c9fd7b6aeb811892babffd9694b9da66f9ac
     }
 
     // This method reads the scores from the file. Don't look inside.

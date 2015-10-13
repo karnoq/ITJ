@@ -17,6 +17,7 @@ public class Car
     public Car(int numberOfSeats)
     {
         this.numberOfSeats = numberOfSeats;
+        this.passengers = new ArrayList<String>();
     }
 
     /**
@@ -25,6 +26,10 @@ public class Car
     */
     public void addPassenger(String name)
     {
+        if (passengers.size() < numberOfSeats - 1)
+        {
+            passengers.add(name);
+        }
     }
 
     /**
@@ -33,6 +38,7 @@ public class Car
     */
     public int getPassengerCount()
     {
+        return passengers.size();
     }
 
     /**

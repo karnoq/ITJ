@@ -6,6 +6,7 @@
 public class Car
 {
     private int numberOfSeats;
+    private int passengers = 0;
 
     /**
         Constructs a car with a given number of seats
@@ -22,6 +23,10 @@ public class Car
     */
     public void addPassenger()
     {
+        if (passengers < numberOfSeats - 1)
+        {
+            passengers++;
+        }
     }
 
     /**
@@ -30,6 +35,7 @@ public class Car
     */
     public int getPassengerCount()
     {
+        return passengers;
     }
 }
 

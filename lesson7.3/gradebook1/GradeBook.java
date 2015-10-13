@@ -30,7 +30,35 @@ public class GradeBook
     public double totalForStudent(int studentIndex)
     {
         // TODO: Return the total of all the scores for the student in row studentIndex
+<<<<<<< HEAD
         return 0;
+=======
+//         int sum = 0;
+//         
+//         if (studentIndex < grades.length)
+//         {
+//             for (int i = 0; i < grades[studentIndex].length; i++)
+//             {
+//                 sum += grades[studentIndex][i];
+//             }
+//             return sum;
+//         }
+//         else
+//         {
+//             return -1;
+//         }
+        // Below solution is from Udacity
+        if (studentIndex < 0 || studentIndex >= numStudents)
+        {
+            return -1;
+        }
+        double sum = 0;
+        for (int column = 0; column < numTopics; column++)
+        {
+            sum += grades[studentIndex][column];
+        }
+        return sum;
+>>>>>>> 2798c9fd7b6aeb811892babffd9694b9da66f9ac
     }
 
     // This method reads the scores from the file. Don't look inside.
