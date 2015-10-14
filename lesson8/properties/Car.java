@@ -9,6 +9,19 @@ public class Car
     private int numberOfSeats; // Don't make this a settable property
     private String driverName;
     private ArrayList<String> passengers; // Not a property
+    
+    public void setDriverName(String name)
+    {
+        if (name.length() > 0)
+        {
+            driverName = name;
+        }
+    }
+    
+    public String getDriverName()
+    {
+        return driverName;
+    }
 
     /**
         Constructs a car with a given number of seats
