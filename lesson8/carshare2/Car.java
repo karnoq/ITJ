@@ -65,6 +65,19 @@ public class Car
     public void drive()
     {
         // TODO: Implement this method
+        location++;
+        int i = 0;
+        while (i < passengers.size())
+        {
+            if (passengers.get(i).getDestination() == location)
+            {
+                passengers.remove(i);
+            }
+            else
+            {
+                i++;
+            }
+        }
     }
 
     public String toString()
