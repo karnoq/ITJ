@@ -10,11 +10,14 @@ public class Person
 
     // TODO: Assign IDs 1, 2, 3, ... to each Person object
     // Use a static variable to track the last ID that was assigned.
+    private static int lastAssignedID = 0;
 
     public Person(String name)
     {
         this.name = name;
         friends = new ArrayList<Person>();
+        id = Person.lastAssignedID + 1;
+        Person.lastAssignedID = id;
     }
 
     /**
