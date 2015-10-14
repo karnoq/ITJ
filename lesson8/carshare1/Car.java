@@ -10,6 +10,7 @@ public class Car
     private String driverName;
     private int location;
     private int destination;
+    
 
     public Car(String driverName, int numberOfSeats, int destination)
     {
@@ -47,6 +48,16 @@ public class Car
     public boolean tryToAdd(Person p)
     {
         // TODO: Complete this method
+        if (passengers.size() + 2 <= numberOfSeats
+            && p.getDestination() <= destination)
+            {
+                passengers.add(p);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
     }
 
     /**
