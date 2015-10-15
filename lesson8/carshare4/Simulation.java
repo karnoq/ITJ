@@ -71,6 +71,13 @@ public class Simulation
     public void driveCars()
     {
         // Complete this method
+        for (Car c : cars)
+        {
+            while(!c.hasArrive())
+            {
+                c.drive();
+            }
+        }
     }
 
     public String toString()
