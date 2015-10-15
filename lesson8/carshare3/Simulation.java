@@ -55,6 +55,14 @@ public class Simulation
     public void loadPassengers()
     {
         // Complete this method
+        for (Person p : people)
+        {
+            boolean added = false;
+            for (int i = 0; !added && i < cars.size(); i++)
+            {
+                added = cars.get(i).tryToAdd(p);
+            }
+        }
     }
 
     /**
