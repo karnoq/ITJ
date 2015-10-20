@@ -47,27 +47,40 @@ public class Manager
         // photographer who was hired first, then the next highest priority
         // assignment to the next photographer.
         int index = 0;
+        int photographerIndex = 0;
+        int assignedPhotographer = photographerIndex % 2;
+        
         while (index < assignments.size())
         {
             Assignment a = assignments.get(index);
             if (a.getPriority() == 5)
             {
+                photographers.get(assignedPhotographer).takePicture(a.getDescription());
+                photographerIndex++;
                 continue;
             }
             else if (a.getPriority() == 4)
             {
+                photographers.get(assignedPhotographer).takePicture(a.getDescription());
+                photographerIndex++;
                 continue;
             }
             else if (a.getPriority() == 3)
             {
+                photographers.get(assignedPhotographer).takePicture(a.getDescription());
+                photographerIndex++;
                 continue;
             }
             else if (a.getPriority() == 2)
             {
+                photographers.get(assignedPhotographer).takePicture(a.getDescription());
+                photographerIndex++;
                 continue;
             }
             else if (a.getPriority() == 1)
             {
+                photographers.get(assignedPhotographer).takePicture(a.getDescription());
+                photographerIndex++;
                 continue;
             }
             else
