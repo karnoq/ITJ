@@ -46,6 +46,35 @@ public class Manager
         // Assign the highest priority assignment first to the
         // photographer who was hired first, then the next highest priority
         // assignment to the next photographer.
+        int index = 0;
+        while (index < assignments.size())
+        {
+            Assignment a = assignments.get(index);
+            if (a.getPriority() == 5)
+            {
+                continue;
+            }
+            else if (a.getPriority() == 4)
+            {
+                continue;
+            }
+            else if (a.getPriority() == 3)
+            {
+                continue;
+            }
+            else if (a.getPriority() == 2)
+            {
+                continue;
+            }
+            else if (a.getPriority() == 1)
+            {
+                continue;
+            }
+            else
+            {
+                index++;
+            }
+        }
     }
 
     /**
