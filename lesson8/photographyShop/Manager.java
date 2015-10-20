@@ -11,12 +11,14 @@ public class Manager
     // YOUR CODE HERE
     // What does the manager need to remember to do his/her job?
     private ArrayList<String> photographers;
+    private ArrayList<Assignment> assignments;
 
     public Manager()
     {
         // YOUR CODE HERE
         // How do you need to initialize the instance variables?
         photographers = new ArrayList<String>();
+        assignments = new ArrayList<Assignment>();
         
     }
 
@@ -55,6 +57,7 @@ public class Manager
     {
         // YOUR CODE HERE
         // How will you keep track of the unfinished assignments?
+        assignments.add(new Assignment(priority, description));
     }
 
     /**
