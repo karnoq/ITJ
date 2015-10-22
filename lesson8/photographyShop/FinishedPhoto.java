@@ -15,11 +15,11 @@ public class FinishedPhoto
     
     public String getPhoto()
     {
-        
+        return photo;
     }
     
     public String getSignature()
     {
-        
+        return signature;
     }
 }
