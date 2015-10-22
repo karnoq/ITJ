@@ -15,7 +15,7 @@ public class Portfolio
     
     public void addFinishedWork(String photoFileName, String photographer)
     {
-        finishedWorks.add(new FinishedWork(photoFileName, photographer));
+        finishedWorks.add(new FinishedPhoto(photoFileName, photographer));
     }
     
     public void displayFinishedWork()
