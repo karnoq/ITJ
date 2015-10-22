@@ -19,7 +19,7 @@ public class Manager
         // How do you need to initialize the instance variables?
         photographers = new ArrayList<Photographer>();
         assignments = new ArrayList<Assignment>();
-        
+        portfolio = new Portfolio();
     }
 
     /**
@@ -82,7 +82,7 @@ public class Manager
     {
         // YOUR CODE HERE
         // How will you keep track of the unfinished assignments?
-        assignments.add(new Assignment(priority, description));
+        assignments.add(new Assignment(description, priority));
     }
 
     /**
