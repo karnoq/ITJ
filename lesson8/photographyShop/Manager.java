@@ -46,48 +46,26 @@ public class Manager
         // Assign the highest priority assignment first to the
         // photographer who was hired first, then the next highest priority
         // assignment to the next photographer.
-        int index = 0;
-        int photographerIndex = 0;
-        int assignedPhotographer = photographerIndex % 2;
-        
-        while (index < assignments.size())
+        for (Photographer photographer : photographers)
         {
-            Assignment a = assignments.get(index);
-            if (a.getPriority() == 5)
-            {
-                photographers.get(assignedPhotographer).takePicture(a.getDescription());
-                photographerIndex++;
-                continue;
-            }
-            else if (a.getPriority() == 4)
-            {
-                photographers.get(assignedPhotographer).takePicture(a.getDescription());
-                photographerIndex++;
-                continue;
-            }
-            else if (a.getPriority() == 3)
-            {
-                photographers.get(assignedPhotographer).takePicture(a.getDescription());
-                photographerIndex++;
-                continue;
-            }
-            else if (a.getPriority() == 2)
-            {
-                photographers.get(assignedPhotographer).takePicture(a.getDescription());
-                photographerIndex++;
-                continue;
-            }
-            else if (a.getPriority() == 1)
-            {
-                photographers.get(assignedPhotographer).takePicture(a.getDescription());
-                photographerIndex++;
-                continue;
-            }
-            else
-            {
-                index++;
-            }
+            
         }
+        
+        private Assignment getHighestPriorityAssignment()
+        {
+            Assignment highestPriorityAssignment = assignments(0);
+            
+            for (Assignment assignment : assignments)
+            {
+                if (assignment.getPriority() > highestPriorityAssignment.getPriority())
+                {
+                    highestPriorityAssignment = assignment;
+                }
+            }
+            
+            return highestPriorityAssignment;
+        }
+
     }
 
     /**
@@ -114,4 +92,5 @@ public class Manager
         // the photos as you went. If you have already displayed
         // the photos, there is no need to do anything here.
     }
+    
 }
