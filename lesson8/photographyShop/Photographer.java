@@ -29,6 +29,7 @@ public class Photographer
     public void acceptAssignments(Assignment assignment)
     {
         String photoFileName = takePicture(assignment.getDescription());
+        portfolio.addFinishedWork(photoFileName, name);
     }
 
     /**
