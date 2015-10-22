@@ -14,7 +14,7 @@ public class Portfolio
     
     public void addFinishedWork(String photoFileName, String photographer)
     {
-        
+        finishedWorks.add(new FinishedWork(photoFileName, photographer));
     }
     
     public void displayFinishedwork()
@@ -22,8 +22,8 @@ public class Portfolio
         double nextEmptyPosition = 0;
         for (FinishedPhoto photo : finishedWorks)
         {
-            Picture photo = ...
-            Text signature = ...
+            Picture photo;
+            Text signature;
         }
     }
 }
