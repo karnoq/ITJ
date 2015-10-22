@@ -4,4 +4,22 @@
 
 public class FinishedPhoto
 {
+    private String photo;
+    private String signature;
+    
+    public FinishedPhoto(String photoFileName, String signature)
+    {
+        this.photo = photoFileName;
+        this.signature = signature;
+    }
+    
+    public String getPhoto()
+    {
+        
+    }
+    
+    public String getSignature()
+    {
+        
+    }
 }
