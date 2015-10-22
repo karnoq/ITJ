@@ -24,6 +24,9 @@ public class Portfolio
         {
             Picture photo;
             Text signature;
+            photo.draw();
+            signature.draw();
+            nextEmptyPosition += photo.getWidth();
         }
     }
 }
