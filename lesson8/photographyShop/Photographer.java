@@ -30,7 +30,7 @@ public class Photographer
         this.portfolio = portfolio;
     }
     
-    public void acceptAssignments(Assignment assignment)
+    public void acceptAssignment(Assignment assignment)
     {
         String photoFileName = takePicture(assignment.getDescription());
         portfolio.addFinishedWork(photoFileName, name);
