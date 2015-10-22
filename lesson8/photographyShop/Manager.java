@@ -10,7 +10,7 @@ public class Manager
 {
     // YOUR CODE HERE
     // What does the manager need to remember to do his/her job?
-    private ArrayList<String> photographers;
+    private ArrayList<Photographer> photographers;
     private ArrayList<Assignment> assignments;
 
     public Manager()
