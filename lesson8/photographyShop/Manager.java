@@ -29,7 +29,7 @@ public class Manager
     {
         // YOUR CODE HERE
         // How will you keep track of the photographers you have hired?
-        photographers.add(photographer);
+        photographers.add(new Photographer(photographer, portfolio));
     }
 
     /**
