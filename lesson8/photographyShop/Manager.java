@@ -55,24 +55,23 @@ public class Manager
                 assignments.remove(highPriorityAssignment);
             }
         }
-        
-        private Assignment getHighestPriorityAssignment()
-        {
-            Assignment highestPriorityAssignment = assignments.get(0);
-            
-            for (Assignment assignment : assignments)
-            {
-                if (assignment.getPriority() > highestPriorityAssignment.getPriority())
-                {
-                    highestPriorityAssignment = assignment;
-                }
-            }
-            
-            return highestPriorityAssignment;
-        }
-
     }
-
+    
+    private Assignment getHighestPriorityAssignment()
+    {
+        Assignment highestPriorityAssignment = assignments.get(0);
+            
+        for (Assignment assignment : assignments)
+        {
+            if (assignment.getPriority() > highestPriorityAssignment.getPriority())
+            {
+                highestPriorityAssignment = assignment;
+            }
+        }
+            
+        return highestPriorityAssignment;
+    }
+    
     /**
      * A Customer came up with a new assignment. The manager should
      * add it to the to-do list so that next time it's time to give
@@ -96,6 +95,7 @@ public class Manager
         // this method is called, or you may have been displaying
         // the photos as you went. If you have already displayed
         // the photos, there is no need to do anything here.
+        portfolio.displayFinishedWork();
     }
     
 }
