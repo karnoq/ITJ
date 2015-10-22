@@ -62,24 +62,27 @@ public class Car
        any passengers whose destination is that location.
     */
     // TODO: Return a list of all passengers that get dropped off
-    public void drive()
+    public ArrayList<Person> drive()
     {
         location++;
+        ArrayList<Person> droppedOff = new ArrayList<Person>();
         int i = 0;
         while (i < passengers.size())
         {
             Person p = passengers.get(i);
             if (p.getDestination() == location)
             {
+                droppedOff.add(p);
                 passengers.remove(i);
                 // TODO: Remove print statement
-                System.out.println(driverName
-                                   + " drops off " + p.getName());
+                //System.out.println(driverName
+                //                   + " drops off " + p.getName());
             }
             else
             {
                 i++;
             }
         }
+        return droppedOff;
     }
 }
