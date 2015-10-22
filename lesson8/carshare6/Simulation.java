@@ -61,6 +61,10 @@ public class Simulation
             {
                 added = cars.get(i).tryToAdd(p);
                 // TODO: Add print statement here
+                if(added)
+                {
+                    System.out.println(cars.get(i).getDriverName() + " picks up " + p.getName());
+                }
             }
         }
     }
