@@ -18,7 +18,7 @@ public class Portfolio
         finishedWorks.add(new FinishedWork(photoFileName, photographer));
     }
     
-    public void displayFinishedwork()
+    public void displayFinishedWork()
     {
         double nextEmptyPosition = 0;
         for (FinishedPhoto work : finishedWorks)
