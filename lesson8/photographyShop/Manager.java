@@ -48,7 +48,12 @@ public class Manager
         // assignment to the next photographer.
         for (Photographer photographer : photographers)
         {
-            
+            if (assignments.size() > 0)
+            {
+                Assignment highPriorityAssignment = getHighestPriorityAssignment();
+                photographer.acceptAssignment(highPriorityAssignment);
+                assignments.remove(highPriorityAssignment);
+            }
         }
         
         private Assignment getHighestPriorityAssignment()
