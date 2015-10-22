@@ -25,6 +25,11 @@ public class Photographer
         readPhotos(); // A very important line. this must go in the Photographer
         // constructor so that the photographer will be able to take Pictures.
     }
+    
+    public void acceptAssignments(Assignment assignment)
+    {
+        String photoFileName = takePicture(assignment.getDescription());
+    }
 
     /**
      * A helper method you will need to use.
