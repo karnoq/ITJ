@@ -53,7 +53,7 @@ public class Manager
         
         private Assignment getHighestPriorityAssignment()
         {
-            Assignment highestPriorityAssignment = assignments(0);
+            Assignment highestPriorityAssignment = assignments.get(0);
             
             for (Assignment assignment : assignments)
             {
