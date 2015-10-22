@@ -12,6 +12,7 @@ public class Manager
     // What does the manager need to remember to do his/her job?
     private ArrayList<Photographer> photographers;
     private ArrayList<Assignment> assignments;
+    private Portfolio portfolio;
 
     public Manager()
     {
