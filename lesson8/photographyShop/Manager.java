@@ -17,7 +17,7 @@ public class Manager
     {
         // YOUR CODE HERE
         // How do you need to initialize the instance variables?
-        photographers = new ArrayList<String>();
+        photographers = new ArrayList<Photographer>();
         assignments = new ArrayList<Assignment>();
         
     }
