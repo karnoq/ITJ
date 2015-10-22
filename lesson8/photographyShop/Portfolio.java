@@ -2,6 +2,7 @@
 // the photography shop?
 // Write a class Portfolio if you need a portfolio
 // to implement your design.
+import java.util.ArrayList;
 
 public class Portfolio
 {
@@ -24,7 +25,7 @@ public class Portfolio
         {
             Picture photo = new Picture(work.getPhoto());
             photo.translate(nextEmptyPosition, 0);
-            Text signature = (nextEmptyPosition, photo.getHeight(), work.getSignature());
+            Text signature = new Text(nextEmptyPosition, photo.getHeight(), work.getSignature());
             photo.draw();
             signature.draw();
             nextEmptyPosition += photo.getWidth();
