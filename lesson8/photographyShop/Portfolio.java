@@ -20,10 +20,11 @@ public class Portfolio
     public void displayFinishedwork()
     {
         double nextEmptyPosition = 0;
-        for (FinishedPhoto photo : finishedWorks)
+        for (FinishedPhoto work : finishedWorks)
         {
-            Picture photo;
-            Text signature;
+            Picture photo = new Picture(work.getPhoto());
+            photo.translate(nextEmptyPosition, 0);
+            Text signature = (nextEmptyPosition, photo.getHeight(), work.getSignature());
             photo.draw();
             signature.draw();
             nextEmptyPosition += photo.getWidth();
