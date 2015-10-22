@@ -12,7 +12,7 @@ public class PortfolioDemo
         Portfolio portfolio = new Portfolio();
         portfolio.addFinishedWork("icesmall28.jpg", "Justin Black");
         portfolio.addFinishedWork("ecuasmll5.jpg", "Justin Black");
-        protfolio.addFinishedWork("france6small.jpg", "Justing Black");
+        portfolio.addFinishedWork("france6small.jpg", "Justing Black");
         portfolio.displayFinishedWork();
     }
 }
