@@ -18,12 +18,16 @@ import java.io.FileNotFoundException;
 public class Photographer
 {
     private Map<String, String> photos;
+    private Portfolio portfolio;
+    private String name;
 
-    public Photographer()
+    public Photographer(String name, Portfolio portfolio)
     {
         photos = new HashMap(); // An important line. Must go in the constructor.
         readPhotos(); // A very important line. this must go in the Photographer
         // constructor so that the photographer will be able to take Pictures.
+        this.name = name;
+        this.portfolio = portfolio;
     }
     
     public void acceptAssignments(Assignment assignment)
