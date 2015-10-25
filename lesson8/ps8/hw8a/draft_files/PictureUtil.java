@@ -53,6 +53,21 @@ public class PictureUtil
         // TODO get a gray scale version
         // TODO flip it left to right
         // TODO create and return the new Picture
+        int[][] pixels = pic.getGrayLevels();
+        
+        int swapLengthRow = pixels.length / 2;
+        
+        for (int i = 0; i < swapLengthRow; i++)
+        {
+            for (int j = 0; j < pixels[i].length; j++)
+            {
+                int saved = pixels[i][j];
+                pixels[i][j] = pixels[swapLengthRow + i][j];
+                pixels[swapLengthRow + i][j] = saved;
+            }
+        }
+        Picture newPic = new Picture(pixels);
+        return newPic;
 
     }
 
