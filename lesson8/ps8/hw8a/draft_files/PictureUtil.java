@@ -55,20 +55,20 @@ public class PictureUtil
         // TODO create and return the new Picture
         int[][] pixels = pic.getGrayLevels();
         
-//         int swapLengthRow = pixels.length;
-//         
-//         for (int i = 0; i < swapLengthRow; i++)
-//         {
-//             int len = pixels[i].length;
-//             int swapLengthCol = len / 2;
-//             
-//             for (int j = 0; j < swapLengthCol; j++)
-//             {
-//                 int saved = pixels[i][j];
-//                 pixels[i][j] = pixels[i][len - 1 - i];
-//                 pixels[i][len - 1 - i] = saved;
-//             }
-//         }
+        int swapLengthRow = pixels.length;
+        
+        for (int i = 0; i < swapLengthRow; i++)
+        {
+            int len = pixels[i].length;
+            int swapLengthCol = len / 2;
+            
+            for (int j = 0; j < swapLengthCol; j++)
+            {
+                int saved = pixels[i][j];
+                pixels[i][j] = pixels[i][len - 1 - j];
+                pixels[i][len - 1 - j] = saved;
+            }
+        }
         Picture newPic = new Picture(pixels);
         return newPic;
 
