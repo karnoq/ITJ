@@ -84,7 +84,20 @@ public class PictureUtil
         // TODO get a gray scale version
         // TODO make a new array where the first row of the original becomes the last
         // column of the new array
-        return new Picture(); //just so draft will compile. You will change it in the final
+        int[][] pixels = pic.getGrayLevels();
+        
+        int[][] rotatedPic = new int[pixels[0].length][pixels.length];
+        
+        for (int i = 0; i < pixels[0].length; i++)
+        {
+            for (int j = 0; j < pixels.length; j++)
+            {
+                rotatedPic[i][pixels.length - 1 - j] = pixels[j][i];
+            }
+        }
+        
+        Picture newPic = new Picture(rotatedPic);
+        return newPic; //just so draft will compile. You will change it in the final
     }
 
 }
