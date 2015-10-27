@@ -46,7 +46,7 @@ public class Robot
     private Random generator;
     Point robotObject;
     private int direction;
-    private double distance;
+    //private double distance;
 
     /**
      * Constructor for objects of class Robot
