@@ -41,8 +41,10 @@ import java.util.Random;
 public class Robot
 {
     // TODO: define other instance variables
-
+    private int x;
+    private int y;
     private Random generator;
+    Point robotObject;
 
     /**
      * Constructor for objects of class Robot
@@ -52,7 +54,9 @@ public class Robot
     public Robot(int theX, int theY)
     {
         // TODO: Complete the constructor
-
+        this.x = theX;
+        this.y = theY;
+        robotObject = new Point(this.x, this.y);
         generator = new Random();
         generator.setSeed(12345);  //do not change this statement
     }
@@ -60,7 +64,7 @@ public class Robot
     // TODO Supply getLocation
     public Point getLocation()
     {
-        return null;
+        return robotObject.getLocation();
     }
     // TODO: Supply the methods of the Robot class
 
