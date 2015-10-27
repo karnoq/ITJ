@@ -74,15 +74,15 @@ public class Robot
         direction = generator.nextInt(4);
         if (direction == 0)
         {
-            robotObject.translate(1, 0);
+            robotObject.translate(0, 1);
         }
         else if (direction == 1)
         {
-            robotObject.translate(-1, 0);
+            robotObject.translate(0, -1);
         }
         else if (direction == 2)
         {
-            robotObject.translate(0, 1);
+            robotObject.translate(1, 0);
         }
         else if (direction == 3)
         {
