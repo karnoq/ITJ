@@ -76,6 +76,10 @@ public class WindowShape
     // semi-circle on top.
     public static double area(double width, double height)
     {
-        return 0;
+        // width * height = area of rectangle
+        // Math.PI * r * r = area of circle
+        // width = 2*r -> r = width/2 -> r*r = width * width / 4
+        // But we need half of the circle, so width*width/8
+        return width * height * Math.PI * width * width / 8;
     }
 }
