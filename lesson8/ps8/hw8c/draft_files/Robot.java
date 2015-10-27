@@ -45,6 +45,7 @@ public class Robot
     private int y;
     private Random generator;
     Point robotObject;
+    private int direction;
 
     /**
      * Constructor for objects of class Robot
@@ -57,6 +58,7 @@ public class Robot
         this.x = theX;
         this.y = theY;
         robotObject = new Point(this.x, this.y);
+        direction = 0; //North
         generator = new Random();
         generator.setSeed(12345);  //do not change this statement
     }
@@ -67,5 +69,9 @@ public class Robot
         return robotObject.getLocation();
     }
     // TODO: Supply the methods of the Robot class
+    public void makeRandomMove()
+    {
+        
+    }
 
 }
