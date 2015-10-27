@@ -46,6 +46,7 @@ public class Robot
     private Random generator;
     Point robotObject;
     private int direction;
+    private double distance;
 
     /**
      * Constructor for objects of class Robot
@@ -88,6 +89,11 @@ public class Robot
         {
             robotObject.translate(-1, 0);
         }
+    }
+    
+    public double getDistanceFromStart()
+    {
+        return Math.sqrt(Math.pow(robotObject.getX() - x, 2) + Math.pow(robotObject.getY() - y, 2));
     }
 
 }
