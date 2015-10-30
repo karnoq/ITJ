@@ -27,5 +27,6 @@ public class Dog implements Drawable, Moveable
     {
         final int SPEED = 1; // pixels per second
         pic.translate(0, SPEED * seconds);
+        name.translate(0, SPEED * seconds);
     }
 }
