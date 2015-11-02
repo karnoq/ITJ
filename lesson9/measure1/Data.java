@@ -12,8 +12,8 @@ public class Data
         double sum = 0;
         for (Country obj : objects)
         {
-            ...
+            sum += obj.getArea();
         }
-        return ...
+        return sum / objects.length;
     }
 }
