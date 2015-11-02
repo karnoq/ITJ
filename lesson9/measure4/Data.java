@@ -37,7 +37,11 @@ public class Data
         Measurable largestSoFar = objects[0];
         for (int i = 1; i < objects.length; i++)
         {
-            ...
+            Measurable current = objects[i];
+            if (current.getMeasure() > largestSoFar.getMeasure())
+            {
+                largestSoFar = objects[i];
+            }
         }
         return largestSoFar;
     }
